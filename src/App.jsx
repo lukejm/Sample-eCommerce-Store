@@ -1,12 +1,13 @@
 import './App.css'
+import ProductCategories from "./components/productCategories/ProductCategories.jsx";
 
 function App() {
 
   return (
     <>
-     <p>Frank Grimes is in the house.</p>
+      <ProductCategories />
     </>
-  )
+  );
 }
 
 export default App

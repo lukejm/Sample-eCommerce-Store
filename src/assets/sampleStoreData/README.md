@@ -1,0 +1,1 @@
+The data in this directory is sample data from https://fakestoreapi.com/.
