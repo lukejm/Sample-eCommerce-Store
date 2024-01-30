@@ -1,0 +1,1 @@
+The scripts in this directory fetch sample data from https://fakestoreapi.com/.
