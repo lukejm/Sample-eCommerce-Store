@@ -1,13 +1,13 @@
 // import './App.css'
-import CategoryItemComponent from "./components/productCategories/category-item.component.jsx";
 import './categories.styles.scss';
+import DirectoryComponent from "./components/directory/directoryComponent.jsx";
 import {categories} from "./assets/sampleStoreData/categories.js";
 
 function App() {
 
   return (
     <>
-      <CategoryItemComponent categories={categories}/>
+      <DirectoryComponent categories={categories} />
     </>
   );
 }

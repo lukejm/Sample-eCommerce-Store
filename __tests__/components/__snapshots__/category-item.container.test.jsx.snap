@@ -1,8 +1,8 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`snapshot test 1`] = `
+exports[`snapshot test directory 1`] = `
 <div
-  className="categories-container"
+  className="directory-container"
 >
   <div
     className="category-container"
@@ -14,6 +14,9 @@ exports[`snapshot test 1`] = `
           "backgroundImage": "url(https://i.ibb.co/cvpntL1/hats.png)",
         }
       }
+    />
+    <div
+      className="category-body-container"
     >
       <h2>
         electronics
@@ -33,6 +36,9 @@ exports[`snapshot test 1`] = `
           "backgroundImage": "url(https://i.ibb.co/R70vBrQ/men.png)",
         }
       }
+    />
+    <div
+      className="category-body-container"
     >
       <h2>
         men's clothing
@@ -52,6 +58,9 @@ exports[`snapshot test 1`] = `
           "backgroundImage": "url(https://i.ibb.co/GCCdy8t/womens.png)",
         }
       }
+    />
+    <div
+      className="category-body-container"
     >
       <h2>
         women's clothing
@@ -71,6 +80,9 @@ exports[`snapshot test 1`] = `
           "backgroundImage": "url(https://i.ibb.co/px2tCc3/jackets.png)",
         }
       }
+    />
+    <div
+      className="category-body-container"
     >
       <h2>
         jewelery
@@ -90,6 +102,9 @@ exports[`snapshot test 1`] = `
           "backgroundImage": "url(https://i.ibb.co/0jqHpnp/sneakers.png)",
         }
       }
+    />
+    <div
+      className="category-body-container"
     >
       <h2>
         hats
@@ -98,6 +113,31 @@ exports[`snapshot test 1`] = `
         Shop Now
       </p>
     </div>
+  </div>
+</div>
+`;
+
+exports[`snapshot test electronics category 1`] = `
+<div
+  className="category-container"
+>
+  <div
+    className="background-image"
+    style={
+      {
+        "backgroundImage": "url(https://i.ibb.co/cvpntL1/hats.png)",
+      }
+    }
+  />
+  <div
+    className="category-body-container"
+  >
+    <h2>
+      electronics
+    </h2>
+    <p>
+      Shop Now
+    </p>
   </div>
 </div>
 `;
