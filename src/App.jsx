@@ -3,9 +3,11 @@ import ProductCategories from "./components/productCategories/ProductCategories.
 
 function App() {
 
+  const categories = ["electronics","jewelery","men's-clothing","women's-clothing"];
+
   return (
     <>
-      <ProductCategories />
+      <ProductCategories categories={categories}/>
     </>
   );
 }

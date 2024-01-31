@@ -1,8 +1,7 @@
-import './productCategories.css';
+import './productCategories.styles.scss';
 
-function ProductCategories() {
+function ProductCategories({ categories }) {
 
-  const categories = ["electronics","jewelery","men's-clothing","women's-clothing"];
 
   const filterCategoryStringForKey = (category) => {
     return category.replace("'", "");

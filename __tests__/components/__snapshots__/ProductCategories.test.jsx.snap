@@ -1,0 +1,48 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`snapshot test 1`] = `
+<div
+  className="categories-container"
+>
+  <div
+    className="category-container"
+  >
+    <h2>
+      electronics
+    </h2>
+    <p>
+      Shop Now
+    </p>
+  </div>
+  <div
+    className="category-container"
+  >
+    <h2>
+      jewelery
+    </h2>
+    <p>
+      Shop Now
+    </p>
+  </div>
+  <div
+    className="category-container"
+  >
+    <h2>
+      mens clothing
+    </h2>
+    <p>
+      Shop Now
+    </p>
+  </div>
+  <div
+    className="category-container"
+  >
+    <h2>
+      womens clothing
+    </h2>
+    <p>
+      Shop Now
+    </p>
+  </div>
+</div>
+`;
