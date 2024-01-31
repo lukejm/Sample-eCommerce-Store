@@ -1,13 +1,13 @@
-import './App.css'
-import ProductCategories from "./components/productCategories/ProductCategories.jsx";
+// import './App.css'
+import CategoryItemComponent from "./components/productCategories/category-item.component.jsx";
+import './categories.styles.scss';
+import {categories} from "./assets/sampleStoreData/categories.js";
 
 function App() {
 
-  const categories = ["electronics","jewelery","men's-clothing","women's-clothing"];
-
   return (
     <>
-      <ProductCategories categories={categories}/>
+      <CategoryItemComponent categories={categories}/>
     </>
   );
 }

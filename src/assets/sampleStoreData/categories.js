@@ -1,5 +1,3 @@
-export const simpleCategories = ["electronics","men's clothing","women's clothing", "jewelery", "hats"];
-
 export const categories = [
   {
     "id": "1",

@@ -1,0 +1,103 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`snapshot test 1`] = `
+<div
+  className="categories-container"
+>
+  <div
+    className="category-container"
+  >
+    <div
+      className="background-image"
+      style={
+        {
+          "backgroundImage": "url(https://i.ibb.co/cvpntL1/hats.png)",
+        }
+      }
+    >
+      <h2>
+        electronics
+      </h2>
+      <p>
+        Shop Now
+      </p>
+    </div>
+  </div>
+  <div
+    className="category-container"
+  >
+    <div
+      className="background-image"
+      style={
+        {
+          "backgroundImage": "url(https://i.ibb.co/R70vBrQ/men.png)",
+        }
+      }
+    >
+      <h2>
+        men's clothing
+      </h2>
+      <p>
+        Shop Now
+      </p>
+    </div>
+  </div>
+  <div
+    className="category-container"
+  >
+    <div
+      className="background-image"
+      style={
+        {
+          "backgroundImage": "url(https://i.ibb.co/GCCdy8t/womens.png)",
+        }
+      }
+    >
+      <h2>
+        women's clothing
+      </h2>
+      <p>
+        Shop Now
+      </p>
+    </div>
+  </div>
+  <div
+    className="category-container"
+  >
+    <div
+      className="background-image"
+      style={
+        {
+          "backgroundImage": "url(https://i.ibb.co/px2tCc3/jackets.png)",
+        }
+      }
+    >
+      <h2>
+        jewelery
+      </h2>
+      <p>
+        Shop Now
+      </p>
+    </div>
+  </div>
+  <div
+    className="category-container"
+  >
+    <div
+      className="background-image"
+      style={
+        {
+          "backgroundImage": "url(https://i.ibb.co/0jqHpnp/sneakers.png)",
+        }
+      }
+    >
+      <h2>
+        hats
+      </h2>
+      <p>
+        Shop Now
+      </p>
+    </div>
+  </div>
+</div>
+`;
