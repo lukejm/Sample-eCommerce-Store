@@ -1,9 +1,10 @@
 import './category-item.styles.scss';
 
-function CategoryItem({ key, imageUrl, title }) {
+function CategoryItem({ imageUrl, title }) {
 
   return (
-    <div className='category-container' key={key}>
+    <>
+    <div className='category-container' >
       <div className='background-image'
            style={{backgroundImage: `url(${imageUrl})`}} />
       <div className='category-body-container'>
@@ -11,6 +12,7 @@ function CategoryItem({ key, imageUrl, title }) {
         <p>Shop Now</p>
       </div>
     </div>
+      </>
   );
 }
 
