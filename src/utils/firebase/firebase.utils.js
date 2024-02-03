@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -21,7 +21,7 @@ provider.setCustomParameters({
   promp: 'select_account'
 });
 
-export const auth = getAuth();
+// export const auth = getAuth();
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 export const db = getFirestore();
@@ -48,18 +48,29 @@ export const createUserDocumentFromAuth = async (userAuth, additionalInformation
     } catch (error) {
       console.log('error creating the user', error.message);
     }
-
   }
   return userDocReference;
 };
 
 export const createAuthUserWithEmailAndPassword = async (email, password, displayName) => {
+  const auth = getAuth();
   if (!email || !password || !displayName) return;
   try {
     const {user} = await createUserWithEmailAndPassword(auth, email, password);
     await createUserDocumentFromAuth(user, displayName);
   } catch (error) {
     console.log("error: creating user from password and email.", error);
+  }
+}
+
+export const signInUserFromEmailPassword = async (email, password) => {
+  const auth = getAuth();
+  if (!email || !password) return;
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    console.log(userCredential.user);
+  } catch (error) {
+    console.log("error: signing in user.", error.message, error.code);
   }
 }
 
