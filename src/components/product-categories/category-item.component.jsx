@@ -1,6 +1,6 @@
 import './category-item.styles.scss';
 
-function CategoryItem({ imageUrl, title }) {
+function CategoryItemComponent({ imageUrl, title }) {
 
   return (
     <>
@@ -16,4 +16,4 @@ function CategoryItem({ imageUrl, title }) {
   );
 }
 
-export default CategoryItem;
+export default CategoryItemComponent;

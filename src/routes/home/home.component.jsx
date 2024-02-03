@@ -1,4 +1,4 @@
-import DirectoryComponent from "../../components/directory/directoryComponent.jsx";
+import DirectoryComponent from "../../components/directory/directory.component.jsx";
 // import {categories} from "../../assets/sampleStoreData/categories.js";
 import {Outlet} from "react-router-dom";
 

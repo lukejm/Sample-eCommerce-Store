@@ -1,3 +1,4 @@
+import './form-input.styles.scss';
 
 function FormInput({ label, ...otherProps }) {
   return (

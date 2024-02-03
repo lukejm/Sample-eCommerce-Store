@@ -1,15 +1,15 @@
 import { expect, test } from 'vitest';
 import renderer from 'react-test-renderer';
-import CategoryItem from "../../src/components/product-categories/category.item.jsx";
+import CategoryItemComponent from "../../src/components/product-categories/category-item.component.jsx";
 import {categories} from "../../__mocks__/MockData.js";
-import DirectoryComponent from "../../src/components/directory/directoryComponent.jsx";
+import DirectoryComponent from "../../src/components/directory/directory.component.jsx";
 
 
 
 const setUpWrapper = () => {
   let container = [];
   categories.forEach(({id, imageUrl, title}) => {
-    container.push(renderer.create(<CategoryItem key={id} imageUrl={imageUrl} title={title} />).toJSON())
+    container.push(renderer.create(<CategoryItemComponent key={id} imageUrl={imageUrl} title={title} />).toJSON())
   });
   return container;
 }
@@ -26,7 +26,7 @@ test('Negated: component has 5 categories when supposed to have 5 categories', (
 
 test('category item has right title', () => {
   const {id, imageUrl, title} = categories[0];
-  const wrapper =  renderer.create(<CategoryItem key={id} imageUrl={imageUrl} title={title} />);
+  const wrapper =  renderer.create(<CategoryItemComponent key={id} imageUrl={imageUrl} title={title} />);
   const tree = wrapper.toJSON();
   const treeTitle = tree.children[1].children[0].children[0];
   expect(treeTitle).toBe(title);
@@ -34,7 +34,7 @@ test('category item has right title', () => {
 
 test('category item has right body', () => {
   const {id, imageUrl, title} = categories[0];
-  const wrapper =  renderer.create(<CategoryItem key={id} imageUrl={imageUrl} title={title} />);
+  const wrapper =  renderer.create(<CategoryItemComponent key={id} imageUrl={imageUrl} title={title} />);
   const tree = wrapper.toJSON();
   const treeTitle = tree.children[1].children[1].children[0];
   expect(treeTitle).toBe("Shop Now");
@@ -42,7 +42,7 @@ test('category item has right body', () => {
 
 test('snapshot test electronics category url correct', () => {
   const {id, imageUrl, title} = categories[0];
-  const wrapper =  renderer.create(<CategoryItem key={id} imageUrl={imageUrl} title={title} />);
+  const wrapper =  renderer.create(<CategoryItemComponent key={id} imageUrl={imageUrl} title={title} />);
   const tree = wrapper.toJSON();
   const bgImageString = tree.children[0].props.style.backgroundImage;
   expect(bgImageString).toContain(imageUrl);
