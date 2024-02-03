@@ -4,10 +4,8 @@ import HomeComponent from "./src/routes/home/home.component.jsx";
 import {categories} from "./src/assets/sampleStoreData/categories.js";
 import SignOut from "./src/routes/sign-out/sign-out.component.jsx";
 import AuthComponent from "./src/routes/authentication/auth.component.jsx";
+import Shop from "./src/components/shop/shop.component.jsx";
 
-const Shop = () => {
-  return <h1>I am the Great Cornholio!</h1>
-}
 
 function App() {
   return (
