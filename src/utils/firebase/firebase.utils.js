@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -14,15 +14,16 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const auth = getAuth();
 
 const provider = new GoogleAuthProvider();
+
 
 provider.setCustomParameters({
   promp: 'select_account'
 });
 
 export const signInWithGooglePopup = async () => {
-  const auth = getAuth();
   await signInWithPopup(auth, provider);
 }
 
@@ -53,24 +54,30 @@ export const createUserDocumentFromAuth = async (userAuth, additionalInformation
 };
 
 export const createAuthUserWithEmailAndPassword = async (email, password, displayName) => {
-  const auth = getAuth();
   if (!email || !password || !displayName) return;
   try {
     const {user} = await createUserWithEmailAndPassword(auth, email, password);
-    await createUserDocumentFromAuth(user, displayName);
+    return await createUserDocumentFromAuth(user, displayName);
   } catch (error) {
     console.log("error: creating user from password and email.", error);
   }
 }
 
 export const signInUserFromEmailPassword = async (email, password) => {
-  const auth = getAuth();
   if (!email || !password) return;
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     console.log(userCredential.user);
+    return userCredential.user;
   } catch (error) {
     console.log("error: signing in user.", error.message, error.code);
   }
 }
 
+export const signOutUser = async () => {
+  await signOut(auth);
+}
+
+export const onAuthStateChangedListener = (callback) => {
+  onAuthStateChanged(auth, callback);
+}

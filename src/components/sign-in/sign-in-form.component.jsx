@@ -1,8 +1,9 @@
 import './sign-in-form.styles.scss';
 import FormInput from "../form-input/form-input.component.jsx";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import {signInUserFromEmailPassword} from "../../utils/firebase/firebase.utils.js";
 import Button from "../button/button.component.jsx";
+import {UserContext} from "../../context/user.context.jsx";
 
 const defaultFormFields = {
   email: '',
@@ -21,7 +22,7 @@ function SignInForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await signInUserFromEmailPassword(email, password);
+      const user = await signInUserFromEmailPassword(email, password);
     } catch (error) {
       console.log("error: logging in.", error);
     } finally {

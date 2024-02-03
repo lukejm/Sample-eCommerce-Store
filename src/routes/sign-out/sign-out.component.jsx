@@ -1,20 +1,13 @@
-import { getAuth, signOut } from 'firebase/auth';
+import {signOutUser} from "../../utils/firebase/firebase.utils.js";
 
 function SignOut() {
-  const signOutUser = async () => {
-    const auth = getAuth()
-    signOut(auth).then(() => {
-      // sign out successful
-      console.log("success: signed out");
-    }).catch((error) => {
-      console.log("error: couldn't sign out", error);
-    });
-  };
+
+  const signOut = () => signOutUser();
 
   return (
     <div>
       <h1>SignOutPage</h1>
-      <button onClick={signOutUser}>Sign Out</button>
+      <button onClick={signOut}>Sign Out</button>
     </div>
   );
 }
