@@ -1,4 +1,4 @@
-import './sign-in.styles.scss';
+import './sign-in-form.styles.scss';
 import FormInput from "../form-input/form-input.component.jsx";
 import {useState} from "react";
 import {signInUserFromEmailPassword} from "../../utils/firebase/firebase.utils.js";
@@ -9,7 +9,7 @@ const defaultFormFields = {
   password: ''
 }
 
-function SignIn() {
+function SignInForm() {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
@@ -32,6 +32,7 @@ function SignIn() {
   return (
     <div className='sign-in-container'>
       <h2>Sign In.</h2>
+      <span>Sign in with your email and password.</span>
       <form onSubmit={handleSubmit}>
         <FormInput
           label='Email'
@@ -57,4 +58,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default SignInForm;

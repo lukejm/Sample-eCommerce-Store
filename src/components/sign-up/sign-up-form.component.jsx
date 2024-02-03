@@ -26,7 +26,7 @@ function SignUpForm() {
    try {
      await createAuthUserWithEmailAndPassword(email, password, {displayName});
    } catch (error) {
-     if (error.code === 'auth/email-already-in-use') {
+     if (error.code === 'authentification/email-already-in-use') {
        alert('Cannot create user, email already in use');
      } else {
        console.log('user creation encountered an error', error);
@@ -44,7 +44,7 @@ function SignUpForm() {
   return (
     <div className='sign-up-container'>
       <h2>Don't have an account?</h2>
-      <span>Sign up with your email and password</span>
+      <span>Sign up with your email and password.</span>
       <form onSubmit={handleSubmit}>
         <FormInput
           label='Display Name'

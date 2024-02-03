@@ -21,14 +21,14 @@ provider.setCustomParameters({
   promp: 'select_account'
 });
 
-// export const auth = getAuth();
-export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+export const signInWithGooglePopup = async () => {
+  const auth = getAuth();
+  await signInWithPopup(auth, provider);
+}
 
 export const db = getFirestore();
 
 export const createUserDocumentFromAuth = async (userAuth, additionalInformation = {}) => {
-
-
   if (!userAuth) return;
 
   const userDocReference = await doc(db, 'users', userAuth.uid);

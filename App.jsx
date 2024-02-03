@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import NavigationComponent from "./src/routes/navigation/navigation.component.jsx";
 import HomeComponent from "./src/routes/home/home.component.jsx";
-import SignIn from "./src/components/sign-in/sign-in.component.jsx";
+import SignInForm from "./src/components/sign-in/sign-in-form.component.jsx";
 import {categories} from "./src/assets/sampleStoreData/categories.js";
 import SignOut from "./src/routes/sign-out/sign-out.component.jsx";
-import AuthComponent from "./src/routes/auth/auth.component.jsx";
+import AuthComponent from "./src/routes/authentification/auth.component.jsx";
 
 const Shop = () => {
   return <h1>I am the Great Cornholio!</h1>
