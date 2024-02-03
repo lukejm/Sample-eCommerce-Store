@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import NavigationComponent from "./src/routes/navigation/navigation.component.jsx";
 import HomeComponent from "./src/routes/home/home.component.jsx";
-import SignIn from "./src/routes/sign-in/sign-in.component.jsx";
+import SignIn from "./src/components/sign-in/sign-in.component.jsx";
 import {categories} from "./src/assets/sampleStoreData/categories.js";
 import SignOut from "./src/routes/sign-out/sign-out.component.jsx";
 

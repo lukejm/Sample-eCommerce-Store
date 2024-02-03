@@ -1,11 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCBqX2SVGF1KyxzKDu07t6vCG_AukE01zs",
   authDomain: "sample-ecommerce-store.firebaseapp.com",
@@ -57,11 +53,13 @@ export const createUserDocumentFromAuth = async (userAuth, additionalInformation
   return userDocReference;
 };
 
-export const createAuthUserWithEmailAndPassword = async (email, password) => {
-  if (!email || !password) return;
+export const createAuthUserWithEmailAndPassword = async (email, password, displayName) => {
+  if (!email || !password || !displayName) return;
   try {
-    return await createUserWithEmailAndPassword(auth, email, password);
+    const {user} = await createUserWithEmailAndPassword(auth, email, password);
+    await createUserDocumentFromAuth(user, displayName);
   } catch (error) {
     console.log("error: creating user from password and email.", error);
   }
 }
+
