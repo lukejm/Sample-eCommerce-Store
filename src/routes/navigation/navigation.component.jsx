@@ -4,8 +4,8 @@ import Logo from '../../assets/react.svg?react';
 import './navigation.styles.scss';
 import {useContext} from "react";
 import {UserContext} from "../../context/user.context.jsx";
-import CartIcon from "../../components/cart/cart-icon.component.jsx";
-import CartDropdown from "../../components/cart/cart-dropdown.component.jsx";
+import CartIcon from "../../components/cart-menu/cart-icon.component.jsx";
+import CartDropdown from "../../components/cart-menu/cart-dropdown.component.jsx";
 import {CartContext} from "../../context/cart.context.jsx";
 
 function NavigationComponent() {
