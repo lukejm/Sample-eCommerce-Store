@@ -13,7 +13,7 @@ function ProductCard({ product }) {
 
   return (
     <div className='product-card-container'>
-      {/*<img src={image} alt={`${name}`} />*/}
+      <img src={image} alt={`${name}`} />
       <div className='footer'>
         <span className='name'>{name}</span>
         <span className='price'>{price}</span>

@@ -16,8 +16,6 @@ const addToCart = (cartItems, productToAdd) => {
   return [...cartItems, {...productToAdd, quantity: 1}];
 }
 
-
-
 export const CartContext = createContext({
   isCartOpen: false,
   setIsCartOpen: () => {},
@@ -28,8 +26,6 @@ export const CartContext = createContext({
   removeItemCategoryFromCart: () => {},
   totalCost: 0
 });
-
-
 
 export function CartProvider({ children }) {
   const [isCartOpen, setIsCartOpen] =  useState(false);
@@ -67,7 +63,6 @@ export function CartProvider({ children }) {
   }
 
   const removeItemCategoryFromCart = (product) => {
-    console.log(product);
     const modifiedCart = cartItems.filter((cartItem) => {
       return (cartItem.id !== product.id)
     });

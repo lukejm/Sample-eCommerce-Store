@@ -1,5 +1,6 @@
 import { signInWithGooglePopup} from "../../utils/firebase/firebase.utils.js";
 import Button from "../button/button.component.jsx";
+import './sign-in-form.styles.scss';
 
 function GoogleSignIn() {
 

@@ -30,9 +30,9 @@ function CheckoutItem({ cartItem }) {
       <img className='image-container' src={image} alt={image} />
       <span className='name'>{title}</span>
       <button onClick={removeItem}>&lt;</button><span className='quantity'>{quantity}</span><button onClick={increaseCartCount}>&gt;</button>
-      <span className='price'>{priceToCurrency()}</span>
-      <span className='price'>{productCategoryTotal()}</span>
-      <button className='remove-button' onClick={removeCategory}></button>
+      <span className='price'>${priceToCurrency()}</span>
+      <span className='price'>${productCategoryTotal()}</span>
+      <button className='remove-button' onClick={removeCategory}>&#10005;</button>
     </div>
   );
 }

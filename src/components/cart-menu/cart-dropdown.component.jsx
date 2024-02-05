@@ -1,4 +1,4 @@
-import './cart-dropdown.component.scss';
+import './cart-dropdown.styles.scss';
 import Button from "../button/button.component.jsx";
 import {useContext} from "react";
 import {CartContext} from "../../context/cart.context.jsx";
@@ -10,8 +10,9 @@ function CartDropdown() {
 
   return (
     <div className='cart-dropdown-container'>
-      <h1>Cart</h1>
-      {cartItems.map(product => <CartItem key={product.id} product={product} />)}
+      <div className='cart-items'>
+        {cartItems.map(product => <CartItem key={product.id} product={product} />)}
+      </div>
       <Link className='' to='/checkout'>
         <Button>Go To Checkout</Button>
       </Link>

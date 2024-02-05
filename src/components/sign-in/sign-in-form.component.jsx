@@ -1,9 +1,9 @@
 import './sign-in-form.styles.scss';
 import FormInput from "../form-input/form-input.component.jsx";
-import {useContext, useState} from "react";
+import {useState} from "react";
 import {signInUserFromEmailPassword} from "../../utils/firebase/firebase.utils.js";
 import Button from "../button/button.component.jsx";
-import {UserContext} from "../../context/user.context.jsx";
+import GoogleSignIn from "./google-sign-in-form.component.jsx";
 
 const defaultFormFields = {
   email: '',
@@ -51,7 +51,10 @@ function SignInForm() {
           name='password'
           value={password}
         />
-        <Button type='submit'>Sign In</Button>
+        <div className='buttons-container'>
+          <Button type='submit'>Sign In</Button>
+          <GoogleSignIn />
+        </div>
       </form>
     </div>
 
