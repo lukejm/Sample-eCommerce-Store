@@ -6,7 +6,6 @@ import {CartContext} from "../../context/cart.context.jsx";
 function CartIcon() {
   const { cartItemCount } = useContext(CartContext);
 
-  console.log(cartItemCount);
 
   return (
     <div className='cart-icon-container'>

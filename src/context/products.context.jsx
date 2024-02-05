@@ -10,7 +10,6 @@ export function ProductProvider({children}) {
   const [products, setProducts] = useState(PRODUCTS);
   const value = {products};
 
-  console.log(products);
   return (
     <ProductsContext.Provider value={value}>
       {children}
