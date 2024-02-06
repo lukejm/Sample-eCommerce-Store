@@ -1,16 +1,31 @@
-import {ProductsContext} from "../../context/products.context.jsx";
+import {CategoryContext} from "../../context/category.context.jsx";
 import {useContext} from "react";
 import './shop.styles.scss';
 import ProductCard from "./product-card.component.jsx";
 
 function Shop() {
-  const { products } = useContext(ProductsContext);
-  return (
+  const { categoryMap} = useContext(CategoryContext);
+
+  const implementProducts = (category) => (
     <div className='products-container'>
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+        {category.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
     </div>
   );
+
+  return (
+    <>
+      {Object.keys(categoryMap).map((title) => (
+        <div key={title}>
+          <h2>{title}</h2>
+          <div className='category-container'>
+            {implementProducts(categoryMap[title])}
+          </div>
+        </div>
+      ))}
+    </>
+  );
 }
+
 export default Shop;

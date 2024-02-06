@@ -1,8 +1,6 @@
-{
-  "title": "products",
-  "items": [
+const SHOP_DATA = [
     {
-      "title": "men's clothing",
+      "title": "mens",
       "items": [
         {
           "id": 1,
@@ -172,7 +170,7 @@
       ]
     },
     {
-      "title": "women's clothing",
+      "title": "womens",
       "items": [
         {
           "id": 15,
@@ -243,4 +241,5 @@
       ]
     }
   ]
-}
+
+export default SHOP_DATA;
