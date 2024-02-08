@@ -6,14 +6,13 @@ import ProductCard from "../shop/product-card.component.jsx";
 
 function Category() {
   const { category } = useParams();
-  const { categoriesMap } = useContext(CategoryContext);
-  const [products, setProducts] = useState(categoriesMap[category]);
+  const { categoryMap } = useContext(CategoryContext);
+  const [products, setProducts] = useState(categoryMap[category]);
 
   useEffect(() => {
-    setProducts(categoriesMap[category]);
-  }, [category, categoriesMap]);
+    setProducts(categoryMap[category]);
+  }, [category, categoryMap]);
 
-  console.log("FRAML::", category);
   return (
     <>
       <div className='category-title'>{category.toUpperCase()}</div>

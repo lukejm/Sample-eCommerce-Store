@@ -7,7 +7,7 @@ function Shop() {
   return (
     <Routes>
       <Route index element={<FullCategoryPreview />} />
-      <Route path=':category' eleemnt={<Category />} />
+      <Route path=':category' element={<Category />} />
     </Routes>
   );
 }
