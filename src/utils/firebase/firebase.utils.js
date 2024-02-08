@@ -109,7 +109,6 @@ export const signInUserFromEmailPassword = async (email, password) => {
   if (!email || !password) return;
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    console.log(userCredential.user);
     return userCredential.user;
   } catch (error) {
     console.log("error: signing in user.", error.message, error.code);

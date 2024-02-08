@@ -1,15 +1,13 @@
-import CategoryItemComponent from "../shop-category/category-item.component.jsx";
 import './directory.styles.scss';
+import DirectoryItem from "./directory-item.component.jsx";
 
 function DirectoryComponent({ categories }) {
 
   return (
     <div className='directory-container'>
       {categories.map(category => (
-        <CategoryItemComponent key={category.id}
-                               imageUrl={category.imageUrl}
-                               title={category.title} />
-      ))}
+        <DirectoryItem key={category.id} category={category} />
+        ))}
     </div>
   );
 }
