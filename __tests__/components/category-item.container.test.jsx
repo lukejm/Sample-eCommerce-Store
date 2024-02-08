@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 import renderer from 'react-test-renderer';
-import CategoryItemComponent from "../../src/components/product-categories/category-item.component.jsx";
+import CategoryItemComponent from "../../src/components/shop-category/category-item.component.jsx";
 import {categories} from "../../__mocks__/MockData.js";
 import DirectoryComponent from "../../src/components/directory/directory.component.jsx";
 
